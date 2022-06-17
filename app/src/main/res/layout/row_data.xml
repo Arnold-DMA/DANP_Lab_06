@@ -18,9 +18,10 @@
             android:id="@+id/tvNumero"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".10"
+            android:layout_weight=".13"
             android:text="TextView"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:gravity="center"/>
 
         <ImageView
             android:id="@+id/ivImagen"
@@ -41,21 +42,21 @@
             android:id="@+id/tvPrincipal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".175"
+            android:layout_weight=".165"
             android:text="TextView"
             android:padding="2dp"/>
         <TextView
             android:id="@+id/tvSecundario"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".175"
+            android:layout_weight=".165"
             android:text="TextView"
             android:padding="2dp"/>
         <TextView
             android:id="@+id/tvRegion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".175"
+            android:layout_weight=".165"
             android:text="TextView"
             android:padding="2dp"/>
     </LinearLayout>
