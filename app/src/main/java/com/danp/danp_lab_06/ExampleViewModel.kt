@@ -13,8 +13,6 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.withContext
 
 class ExampleViewModel: ViewModel() {
-    private val backendService: ExampleBackendService = ExampleBackendService()
-
     fun items(): Flow<PagingData<Pokemons.Pokemon>> {
         val loader: DataPageLoader = {pageIndex, pageSize ->
             getData(pageIndex, pageSize)
@@ -33,8 +31,6 @@ class ExampleViewModel: ViewModel() {
         delay(1000)
         val offset = pageIndex*pageSize
         val max = Pokemons.pokeList.size
-        var result: List<Pokemons.Pokemon>
-        //val pokeLista: List<Pokemons.Pokemon> = listOf()
         if (offset + pageSize <= max)
             return@withContext Pokemons.pokeList.subList(offset, offset+pageSize)
         else if(offset < max)
@@ -43,14 +39,6 @@ class ExampleViewModel: ViewModel() {
             return@withContext listOf()
     }
 
-    /*val flow = Pager(
-        // Configure how data is loaded by passing additional properties to
-        // PagingConfig, such as prefetchDistance.
-        PagingConfig(pageSize = 9)
-    ) {
-        ExamplePagingSource(backendService)
-    }.flow
-        .cachedIn(viewModelScope)*/
     private companion object{
         const val PAGE_SIZE = 10
     }

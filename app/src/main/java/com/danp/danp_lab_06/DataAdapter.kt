@@ -22,7 +22,6 @@ class DataAdapter(diffCallback: DiffUtil.ItemCallback<Pokemons.Pokemon>) :
         // null item as a placeholder.
         if (item != null) {
             holder.bind(item)
-
         }
     }
 }

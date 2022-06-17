@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.apply {
             addItemDecoration(DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL))
         }
-
         // Activities can use lifecycleScope directly, but Fragments should instead use
         // viewLifecycleOwner.lifecycleScope.
         lifecycleScope.launch {
